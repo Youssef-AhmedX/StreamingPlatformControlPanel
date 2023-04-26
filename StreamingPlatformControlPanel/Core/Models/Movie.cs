@@ -1,5 +1,9 @@
-﻿namespace StreamingPlatformControlPanel.Core.Models
+﻿using Microsoft.EntityFrameworkCore;
+using System.Xml.Linq;
+
+namespace StreamingPlatformControlPanel.Core.Models
 {
+    [Index(nameof(ContentId), IsUnique = true)]
     public class Movie : BaseModel
     {
         public int Id { get; set; }

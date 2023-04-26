@@ -1,5 +1,9 @@
-﻿namespace StreamingPlatformControlPanel.Core.Models
+﻿using Microsoft.EntityFrameworkCore;
+using System.Xml.Linq;
+
+namespace StreamingPlatformControlPanel.Core.Models
 {
+    [Index(nameof(EpNum),nameof(SeasonId), IsUnique = true)]
     public class Episod : BaseModel
     {
         public int Id { get; set; }

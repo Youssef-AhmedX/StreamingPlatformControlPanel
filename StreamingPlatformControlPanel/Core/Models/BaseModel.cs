@@ -2,6 +2,6 @@
 {
     public class BaseModel
     {
-        public bool Isdeleted { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

@@ -52,7 +52,6 @@ namespace StreamingPlatformControlPanel.Controllers
                     .ThenInclude(f => f.FilmMaker)
                     .Include(m => m.Content)
                     .ThenInclude(c => c.Certification)
-                    .ThenInclude(c => c.Name)
                     .FirstOrDefault(m => m.ContentId == Id);
 
                 if (movie is null)
@@ -112,7 +111,7 @@ namespace StreamingPlatformControlPanel.Controllers
                 content.Categories.Add(new ContentCategory { CategoryId = SelectedCategoryId });
             }
 
-            content.Isdeleted = true;
+            content.IsDeleted = true;
 
             _context.Contents.Add(content);
             _context.SaveChanges();
@@ -185,7 +184,7 @@ namespace StreamingPlatformControlPanel.Controllers
             }
 
 
-            content.Isdeleted = !content.Isdeleted;
+            content.IsDeleted = !content.IsDeleted;
 
             _context.Contents.Update(content);
             _context.SaveChanges();
@@ -198,12 +197,12 @@ namespace StreamingPlatformControlPanel.Controllers
             ContentFormViewModel contentForm = form is null ? new ContentFormViewModel() : form;
 
             var Categories = _context.Categories
-                .Where(c => !c.Isdeleted)
+                .Where(c => !c.IsDeleted)
                 .OrderBy(c => c.Name)
                 .ToList();
 
             var Certifications = _context.Certifications
-                .Where(c => !c.Isdeleted)
+                .Where(c => !c.IsDeleted)
                 .ToList();
 
             contentForm.Categories = _mapper.Map<IEnumerable<SelectListItem>>(Categories);

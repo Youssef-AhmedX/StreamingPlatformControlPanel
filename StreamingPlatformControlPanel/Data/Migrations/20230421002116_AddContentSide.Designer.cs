@@ -279,7 +279,7 @@ namespace StreamingPlatformControlPanel.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<bool>("Isdeleted")
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
@@ -303,7 +303,7 @@ namespace StreamingPlatformControlPanel.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Isdeleted")
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
@@ -334,7 +334,7 @@ namespace StreamingPlatformControlPanel.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Isdeleted")
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
@@ -411,7 +411,7 @@ namespace StreamingPlatformControlPanel.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Isdeleted")
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<int>("SeasonId")
@@ -432,7 +432,7 @@ namespace StreamingPlatformControlPanel.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<bool>("Isdeleted")
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
@@ -467,7 +467,7 @@ namespace StreamingPlatformControlPanel.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<bool>("Isdeleted")
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
@@ -497,7 +497,7 @@ namespace StreamingPlatformControlPanel.Data.Migrations
                     b.Property<int>("DurationTimeInHour")
                         .HasColumnType("int");
 
-                    b.Property<bool>("Isdeleted")
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("TrailerPath")
@@ -519,7 +519,7 @@ namespace StreamingPlatformControlPanel.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<bool>("Isdeleted")
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("SeasonNum")
@@ -551,7 +551,7 @@ namespace StreamingPlatformControlPanel.Data.Migrations
                     b.Property<int>("ContentId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("Isdeleted")
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<int>("NumOfSeason")

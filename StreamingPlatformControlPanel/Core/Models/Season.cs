@@ -1,5 +1,11 @@
-﻿namespace StreamingPlatformControlPanel.Core.Models
+﻿using Microsoft.EntityFrameworkCore;
+using System.Xml.Linq;
+using System;
+
+namespace StreamingPlatformControlPanel.Core.Models
 {
+    [Index(nameof(SeasonNum), nameof(SeriesId), IsUnique = true)]
+
     public class Season : BaseModel
     {
         public int Id { get; set; }

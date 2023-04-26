@@ -16,7 +16,7 @@ namespace StreamingPlatformControlPanel.Data.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Isdeleted = table.Column<bool>(type: "bit", nullable: false)
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -31,7 +31,7 @@ namespace StreamingPlatformControlPanel.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Isdeleted = table.Column<bool>(type: "bit", nullable: false)
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -45,7 +45,7 @@ namespace StreamingPlatformControlPanel.Data.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Isdeleted = table.Column<bool>(type: "bit", nullable: false)
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -59,7 +59,7 @@ namespace StreamingPlatformControlPanel.Data.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Isdeleted = table.Column<bool>(type: "bit", nullable: false)
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -77,7 +77,7 @@ namespace StreamingPlatformControlPanel.Data.Migrations
                     ReleaseDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ContentType = table.Column<string>(type: "nvarchar(1)", nullable: false),
                     CertificationId = table.Column<int>(type: "int", nullable: false),
-                    Isdeleted = table.Column<bool>(type: "bit", nullable: false)
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -245,7 +245,7 @@ namespace StreamingPlatformControlPanel.Data.Migrations
                     ContentPath = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DurationTimeInHour = table.Column<int>(type: "int", nullable: false),
                     ContentId = table.Column<int>(type: "int", nullable: false),
-                    Isdeleted = table.Column<bool>(type: "bit", nullable: false)
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -266,7 +266,7 @@ namespace StreamingPlatformControlPanel.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     NumOfSeason = table.Column<int>(type: "int", nullable: false),
                     ContentId = table.Column<int>(type: "int", nullable: false),
-                    Isdeleted = table.Column<bool>(type: "bit", nullable: false)
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -288,7 +288,7 @@ namespace StreamingPlatformControlPanel.Data.Migrations
                     SeasonNum = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TrailerPath = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SeriesId = table.Column<int>(type: "int", nullable: false),
-                    Isdeleted = table.Column<bool>(type: "bit", nullable: false)
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -313,7 +313,7 @@ namespace StreamingPlatformControlPanel.Data.Migrations
                     EpName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DurationTimeInHour = table.Column<int>(type: "int", nullable: false),
                     SeasonId = table.Column<int>(type: "int", nullable: false),
-                    Isdeleted = table.Column<bool>(type: "bit", nullable: false)
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {

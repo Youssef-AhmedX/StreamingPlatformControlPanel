@@ -1,5 +1,8 @@
-﻿namespace StreamingPlatformControlPanel.Core.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace StreamingPlatformControlPanel.Core.Models
 {
+    [Index(nameof(Name), IsUnique = true)]
     public class Certification : BaseModel
     {
         public int Id { get; set; }

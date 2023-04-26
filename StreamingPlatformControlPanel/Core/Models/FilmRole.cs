@@ -1,5 +1,9 @@
-﻿namespace StreamingPlatformControlPanel.Core.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace StreamingPlatformControlPanel.Core.Models
 {
+    [Index(nameof(Name), IsUnique = true)]
+
     public class FilmRole : BaseModel
     {
         public int Id { get; set; }
