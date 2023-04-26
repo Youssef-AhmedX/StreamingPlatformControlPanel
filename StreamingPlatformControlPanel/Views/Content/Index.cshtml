@@ -1,0 +1,193 @@
+﻿@model IEnumerable<Content>
+
+<div class="card shadow-sm mb-5 mb-lg-10">
+    <div class="card-header">
+
+        <div class="card-title">
+
+            <div class="symbol symbol-40px">
+                <div class="symbol-label fs-2 fw-semibold text-success me-4">
+                    <!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+                    <span class="svg-icon svg-icon-2 svg-icon-primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.0963 4.92704C20.0963 5.92704 20.8963 7.12705 21.2963 8.32705L17.6963 11.927L8.39633 2.62705C11.8963 1.32705 16.1963 2.02704 19.0963 4.92704ZM2.69633 15.627C3.19633 16.827 3.89634 18.027 4.89634 19.027C7.79634 21.927 11.9963 22.627 15.5963 21.227L6.29634 11.927L2.69633 15.627Z" fill="currentColor" />
+                            <path opacity="0.3" d="M8.39634 2.72705L11.9963 6.32706L2.69634 15.6271C1.29634 12.0271 1.99634 7.82705 4.89634 4.92705C5.89634 3.92705 7.09634 3.22705 8.39634 2.72705ZM11.9963 17.7271L15.5963 21.3271C16.7963 20.8271 17.9963 20.1271 18.9963 19.1271C21.8963 16.2271 22.5963 12.027 21.1963 8.42705L11.9963 17.7271Z" fill="currentColor" />
+                        </svg>
+                    </span>
+                    <!--end::Svg Icon-->
+                </div>
+            </div>
+
+            Content
+        </div>
+        <div class="card-toolbar">
+            <a asp-controller="Content" asp-action="Create" class="btn btn-sm btn-primary">
+                <i class="bi bi-plus-circle"></i>
+                Add
+            </a>
+        </div>
+    </div>
+    <div class="card-body pt-9 pb-0">
+        <!--begin::Details-->
+        <div class="d-flex flex-wrap flex-sm-nowrap mb-6">
+
+        </div>
+        <!--end::Details-->
+
+        <div class="separator"></div>
+
+        <!--begin::Nav-->
+        <ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bold">
+            <!--begin::Nav item-->
+            <li class="nav-item">
+                <a class="nav-link text-active-primary py-5 me-6 @(Model.FirstOrDefault(new Content{ ContentType = 'M'}).ContentType == 'M' ? "active" : string.Empty)" asp-controller="Content" asp-action="index">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    Movies
+                </a>
+            </li>
+            <!--end::Nav item-->
+            <!--begin::Nav item-->
+            <li class="nav-item"> 
+                <a class="js-editions-warning nav-link py-5 me-6 text-active-primary @(Model.FirstOrDefault(new Content{ ContentType = 'S'}).ContentType == 'S' ? "active" : string.Empty)" asp-controller="Content" asp-action="Index" asp-route-ContentType="False">
+                    <span class="svg-icon svg-icon-3 me-2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect opacity="0.5" x="7" y="2" width="14" height="16" rx="3" fill="currentColor" />
+                            <rect x="3" y="6" width="14" height="16" rx="3" fill="currentColor" />
+                        </svg>
+                    </span>
+                    Series
+                </a>
+
+            </li>
+            <!--end::Nav item-->
+        </ul>
+        <!--end::Nav-->
+    </div>
+</div>
+<!--end::Navbar-->
+
+
+<div class="tab-content">
+
+    <!--begin::OverviewCard-->
+    <div id="overviewCard" class="card shadow-sm mb-5 mb-lg-10 tab-pane fade show active">
+        <!--begin::Card header-->
+        <div class="card-header">
+            <!--begin::Card title-->
+            <div class="card-title fs-3 fw-bold">
+                <div class="symbol symbol-40px">
+                    <div class="symbol-label fs-2 fw-semibold text-primary me-4">
+                        <!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+                        <span class="icon svg-icon-2 svg-icon-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                            </svg>
+                        </span>
+                        <!--end::Svg Icon-->
+                    </div>
+                </div>
+                @(Model.FirstOrDefault(new Content{ ContentType = 'M'}).ContentType == 'M' ? "Movie" : "Series")
+            </div>
+            <!--end::Card title-->
+            <div class="card-toolbar">
+                <div class="d-flex align-items-center position-relative my-1">
+                    <span class="svg-icon svg-icon-2 position-absolute ms-4">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.7 18.9L18.6 15.8C17.9 16.9 16.9 17.9 15.8 18.6L18.9 21.7C19.3 22.1 19.9 22.1 20.3 21.7L21.7 20.3C22.1 19.9 22.1 19.3 21.7 18.9Z" fill="currentColor" />
+                            <path opacity="0.3" d="M11 20C6 20 2 16 2 11C2 6 6 2 11 2C16 2 20 6 20 11C20 16 16 20 11 20ZM11 4C7.1 4 4 7.1 4 11C4 14.9 7.1 18 11 18C14.9 18 18 14.9 18 11C18 7.1 14.9 4 11 4ZM8 11C8 9.3 9.3 8 11 8C11.6 8 12 7.6 12 7C12 6.4 11.6 6 11 6C8.2 6 6 8.2 6 11C6 11.6 6.4 12 7 12C7.6 12 8 11.6 8 11Z" fill="currentColor" />
+                        </svg>
+                    </span>
+                    <input type="text" data-kt-filter="search" class="form-control form-control-solid w-250px ps-14" placeholder="Search Content" />
+                </div>
+            </div>
+
+        </div>
+
+        <!--end::Card header-->
+        <!--begin::Card body-->
+        <div class="card-body p-9">
+            <div class="table">
+                <table class="js-datatable table table-row-bordered table-row-gray-300 gy-3 align-middle">
+                    <thead>
+                        <tr class="fw-bold fs-6 text-gray-800">
+                            <th class="">Name</th>
+                            <th class="text-center">Release Date</th>
+                            <th class="text-center">Certification</th>
+                            <th class="text-center">Status</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var content in Model)
+                        {
+                            <tr>
+                                <td>@content.Name</td>
+                                <td>@content.ReleaseDate</td>
+                                <td>@content.Certification?.Name</td>
+                                <td>
+                                    <span class="js-status badge badge-light-@(content.Isdeleted ? "danger" : "success")">
+                                        @(content.Isdeleted ? "Deleted" : "Available")
+                                    </span>
+                                </td>
+                                <td class="d-grid">
+                                    <a class="btn btn-sm btn-outline btn-outline-primary btn-active-light-primary mb-2" asp-action="Details" asp-controller="Content" asp-route-Id="@content.Id" asp-route-ContentType= "@(content.ContentType == 'M' ? true : false)">
+                                        <i class="bi bi-pencil-square"></i>
+                                        Details
+                                    </a>
+                                    <a data-url="/Content/ToggleStatus/@content.Id" data-title="Change Content Status" href="javascript:;" class="js-delete-btn btn btn-sm btn-outline btn-outline-@(content.Isdeleted ? "success" : "danger") btn-active-light-@(content.Isdeleted ? "success" : "danger")">
+
+                                        <i class="bi bi-@(content.Isdeleted ? "arrow-clockwise" : "x-circle")"></i>
+                                        <span class="js-btn-text">
+                                            @(content.Isdeleted ? "Retrieve" : "Delete")
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--end::Card body-->
+        <!--begin::Card footer-->
+        <!--end::Card footer-->
+    </div>
+    <!--end::OverviewCard-->
+
+</div>
+
+
+
+@Html.AntiForgeryToken()
+
+@section CustomScripts{
+    <script src="~/assets/plugins/datatables/datatables.bundle.js"></script>
+
+}
+
+@section Scripts{
+    <script>
+
+        ﻿function confirmBoxSuccess(btn) {
+
+            var row = btn.parents('tr');
+
+            btn.toggleClass('btn-outline-danger btn-outline-success btn-active-light-danger btn-active-light-success');
+            row.addClass('animate__animated animate__flash');
+            btn.find('i').toggleClass('bi-arrow-clockwise bi-x-circle');
+
+            var status = row.find('.js-status');
+            var btnText = btn.find('.js-btn-text');
+
+            var newStatus = status.text().trim() === 'Deleted' ? 'Available' : 'Deleted';
+            status.text(newStatus).toggleClass('badge-light-danger badge-light-success');
+
+            var newBtnText = btnText.text().trim() === 'Retrieve' ? 'Delete' : 'Retrieve';
+            btnText.text(newBtnText);
+        }
+    </script>
+    
+}
+
+
+

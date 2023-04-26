@@ -8,5 +8,8 @@
 
         public int ContentId { get; set; }
         public Content? Content { get; set; }
+
+        public ICollection<Season> Seasons { get; set; } = new List<Season>();
+
     }
 }

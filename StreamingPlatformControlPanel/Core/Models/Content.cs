@@ -11,8 +11,8 @@
         public int CertificationId { get; set; } 
         public Certification? Certification { get; set; }
 
-        public ICollection<FilmMaker> FilmMakers { get; set; } = new List<FilmMaker>();
-        public ICollection<Category> Categories { get; set; } = new List<Category>();
+        public ICollection<ContentFilmMaker> FilmMakers { get; set; } = new List<ContentFilmMaker>();
+        public ICollection<ContentCategory> Categories { get; set; } = new List<ContentCategory>();
 
 
     }

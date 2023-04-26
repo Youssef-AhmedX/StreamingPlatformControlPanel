@@ -16,3 +16,44 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+
+/* Start::Override DropDownList */
+
+.form-floating > .form-select {
+    padding-top: 2.15rem;
+    padding-bottom: 0.25rem;
+}
+
+/* End::Override DropDownList */
+
+/* Start::Override TextArea */
+
+.text-area {
+    resize: none;
+    height: 150px !important;
+}
+
+/* End::Override TextArea */
+
+
+.creatBookCover {
+    height: 230px;
+    width: 144px;
+    object-fit: contain;
+}
+
+.detailBookCover {
+    height: 150px;
+    width: 100px;
+    object-fit: contain;
+}
+
+
+.dt-spinner + div {
+    display: none !important;
+}
+
+.dataTables_empty{
+    text-align:center;
+}

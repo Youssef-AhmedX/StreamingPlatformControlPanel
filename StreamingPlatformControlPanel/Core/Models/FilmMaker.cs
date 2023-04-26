@@ -5,8 +5,8 @@
         public int Id { get; set; }
         public string Name { get; set; } = null!;
 
-        public ICollection<Content> Contents { get; set; } = new List<Content>();
-        public ICollection<FilmRole> FilmRoles { get; set; } = new List<FilmRole>();
+        public ICollection<ContentFilmMaker> Contents { get; set; } = new List<ContentFilmMaker>();
+        public ICollection<FilmMakerRole> FilmRoles { get; set; } = new List<FilmMakerRole>();
 
     }
 }

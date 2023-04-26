@@ -8,5 +8,8 @@
 
         public int SeriesId { get; set; }
         public Series? Series { get; set; }
+
+        public ICollection<Episod> Episods { get; set; } = new List<Episod>();
+
     }
 }

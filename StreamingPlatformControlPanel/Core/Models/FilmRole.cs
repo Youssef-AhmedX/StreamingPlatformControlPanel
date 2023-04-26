@@ -5,7 +5,7 @@
         public int Id { get; set; }
         public string Name { get; set; } = null!;
 
-        public ICollection<FilmMaker> FilmMakers { get; set; } = new List<FilmMaker>();
+        public ICollection<FilmMakerRole> FilmMakers { get; set; } = new List<FilmMakerRole>();
 
     }
 }

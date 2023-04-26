@@ -1,0 +1,24 @@
+﻿@model Movie
+
+
+<p>@Model.Content.Name</p>
+<p>@Model.Content.ReleaseDate</p>
+<p>@Model.Content.Description</p>
+<p>@Model.Content.Certification.Name</p>
+<p>@Model.TrailerPath</p>
+<p>@Model.ContentPath</p>
+<p>@Model.DurationTimeInHour</p>
+<br />
+@foreach (var item in Model.Content?.Categories)
+{
+    <p>@item.Category!.Name</p>
+
+}
+<br />
+
+@foreach (var item in Model.Content?.FilmMakers)
+{
+    <p>@item.FilmMaker!.Name</p>
+    <p>@item.Role</p>
+
+}
